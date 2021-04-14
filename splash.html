@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.ional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    >
+    <title>$GatewayName</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/flexboxgrid.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="text-center">$GatewayName</h2>
+        </div>
+      </div>
+      <form action="$action" method="POST" id="mainForm">
+        <input type="hidden" name="mode_login">
+        <input type="hidden" name="redirect" value="$redirect">
+        <input type="hidden" name="accept_terms" value="yes">
+        <div class="page page1">
+          <div class="row">
+            <div class="col-xs-12">
+              <h3 class="text-center">WiFi Registration</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <p class="text-center">
+                We require registration to use our public WiFi network.
+                <br>
+                Please provide your full name and phone number to continue
+              </p>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="input-group">
+                <input
+                  required="required"
+                  type="text"
+                  autocapitalize="words"
+                  name="name"
+                  placeholder="Full Name"
+                  class="text-left"
+                  pattern="[A-Za-z]+\s([A-Za-z]+\s?){1,}"
+                >
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="col-xs-12">
+              <div class="input-group">
+                <input
+                  required="required"
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number (Numbers only)"
+                  class="text-left"
+                  pattern="\d{10,11}"
+                >
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-xs-12 text-center">
+              <button type="button" class="btn btn-primary btn-nextPage">
+                Continue
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="page page2">
+          <div class="row">
+            <div class="col-xs-12">
+              <h3 class="text-center">
+                WiFi Network &amp; Internet Conditions
+              </h3>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-xs-12">
+              <p class="text-justify">
+                You are solely responsible for any illegal activities once you
+                click the "OK, I AGREE" button.
+              </p>
+              <p class="text-justify">
+                We are not responsible for faulty operation of your computer or
+                equipment. You may be asked to stop using your equipment. This
+                banner will appear again periodically. To renew your access
+                time, you must agree once again every $LoginTimeout seconds.
+              </p>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-xs-12 text-center">
+              <button class="btn btn-primary btn-agreeTerms" type="submit">
+                <span>I Agree!</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/additional-methods.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
